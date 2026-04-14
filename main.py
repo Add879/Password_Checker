@@ -1,10 +1,7 @@
-# List of symbols we want to check for in the password
 symbols = ["!", "@", "#", "$", "%", "&", "*"]
 
-# This function checks the password the user types
 def check_password(password):
-
-    # These variables start at 0 and will count things in the password
+    
     length = len(password)          # counts how long the password is
     symbol_count = 0                # counts how many symbols
     uppercase_count = 0             # counts how many uppercase letters
