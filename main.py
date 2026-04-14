@@ -10,18 +10,15 @@ def check_password(password):
     uppercase_count = 0             # counts how many uppercase letters
     number_count = 0                # counts how many numbers
 
-    # This loop goes through the password one character at a time
+
     for character in password:
 
-        # If the character is a symbol, add 1 to symbol_count
         if character in symbols:
             symbol_count += 1
-
-        # If the character is uppercase, add 1 to uppercase_count
+        
         if character.isupper():
             uppercase_count += 1
 
-        # If the character is a number, add 1 to number_count
         if character.isdigit():
             number_count += 1
 
