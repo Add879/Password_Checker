@@ -1,7 +1,7 @@
 symbols = ["!", "@", "#", "$", "%", "&", "*"]
 
 def check_password(password):
-    
+
     length = len(password)          # counts how long the password is
     symbol_count = 0                # counts how many symbols
     uppercase_count = 0             # counts how many uppercase letters
@@ -25,10 +25,8 @@ def check_password(password):
     print("Uppercase letters:", uppercase_count)
     print("Numbers:", number_count)
 
-    # Score starts at 0 and increases if the password meets requirements
     score = 0
 
-    # Add points based on password strength rules
     if length >= 8:
         score += 1
     if symbol_count >= 1:
@@ -38,7 +36,6 @@ def check_password(password):
     if number_count >= 1:
         score += 1
 
-    # Decide if the password is Strong, Medium, or Weak
     if score == 4:
         print("Password Strength: Strong")
     elif score == 2 or score == 3:
@@ -46,9 +43,6 @@ def check_password(password):
     else:
         print("Password Strength: Weak")
 
-
-# Ask the user to type a password
 password_input = input("Enter a password to check: ")
 
-# Call the function to check the password
 check_password(password_input)
